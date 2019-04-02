@@ -4,6 +4,7 @@ const bottomLine = document.querySelector('.bottomLine')
 const hammy = document.querySelector('.hammy')
 const title = document.querySelector('.title')
 const menuItem = document.querySelector('.menuItem')
+const bg1 = document.querySelector('.bg1')
 
 const lineArr = [topLine, middleLine, bottomLine]
 
@@ -43,7 +44,6 @@ toggleMenu
         scaleY: 25,
         transformOrigin: '50% 50%',
         fill: '#000000',
-        dropShadow: 'rgb(0, 0, 0) 0px 0px 10px 10px',
     }, 'after')
 
     .to(bottomLine, .1, {
