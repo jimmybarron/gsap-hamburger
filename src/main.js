@@ -49,7 +49,7 @@ toggleMenu
     .to(bottomLine, .1, {
         y: -50
     }, 'start')
-
+ 
     .to(bottomLine, .4, {
         y: -50,
         rotation: -45,
