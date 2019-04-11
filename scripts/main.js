@@ -4,23 +4,28 @@ const bottomLine = document.querySelector('.bottomLine')
 const hammy = document.querySelector('.hammy')
 const title = document.querySelector('.title')
 const menuItem = document.querySelector('.menuItem')
-const bg1 = document.querySelector('.bg1')
+const bg2 = document.querySelector('.bg2')
 
 const lineArr = [topLine, middleLine, bottomLine]
 
 // New timeline
-const tl = new TimelineMax({})
+const bgtl = new TimelineMax({
+    yoyo: true,
+})
 
-//Play timeline on mouse enter event
-// hammy.addEventListener('mouseenter', () => {
-//     console.log('mouse enter triggered')
-//     tl.staggerTo(lineArr, .2, {
-//         repeat: 1,
-//         rotation: 45,
-//         transformOrigin: '50% 50%',
-//         yoyo: true,
-//     }, .05)
-// })
+
+//timeline animation
+bgtl
+    .to(bg2, 0, {
+        x: -200,
+}, 'start')
+
+    .to(bg2, 25, {
+        x: 0,
+        ease: Power1.easeInOut,
+}, 'move')
+
+
 
 const toggleMenu = new TimelineMax({
     paused: true,
